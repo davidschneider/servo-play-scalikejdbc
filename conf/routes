@@ -1,0 +1,12 @@
+# Routes
+# ~~~~
+
+GET         /api/v2/adFormats                                                 controllers.AdFormats.all
+
+GET         /api/v2/publishers                                                controllers.Publishers.all
+
+GET         /api/v2/publishers/:publisherId/properties                        controllers.PublisherProperties.findAllByPublisher(publisherId: Long)
+GET         /api/v2/publishers/:publisherId/properties/:propertyId            controllers.PublisherProperties.getPublisherPropertyById(publisherId: Long, propertyId: Long)
+POST        /api/v2/publishers/:publisherId/properties                        controllers.PublisherProperties.createPublisherProperty(publisherId: Long)
+PUT         /api/v2/publishers/:publisherId/properties/:propertyId            controllers.PublisherProperties.updatePublisherProperty(publisherId: Long, propertyId: Long)
+DELETE      /api/v2/publishers/:publisherId/properties/:propertyId            controllers.PublisherProperties.deletePublisherProperty(publisherId: Long, propertyId: Long)
